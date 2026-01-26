@@ -3,50 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <title>فريلانسر حول العالم</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    html { scroll-behavior: smooth; }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #1e90ff, #00c6ff);
       color: white;
-      text-align: center;
-      padding-top: 15%;
       margin: 0;
+      padding: 0;
+      text-align: center;
     }
-    h1 {
-      font-size: 42px;
-      margin-bottom: 20px;
+    header {
+      padding: 50px 20px 30px 20px;
     }
-    p {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 40px;
+    header img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 15px;
     }
-    .whatsapp-btn {
+    h1 { font-size: 38px; margin-bottom: 10px; }
+    p.subtitle { font-size: 20px; margin-bottom: 30px; font-weight: bold; }
+
+    .btn {
       display: inline-block;
-      background-color: #25D366;
       color: white;
-      padding: 15px 30px;
-      font-size: 20px;
+      padding: 14px 28px;
+      font-size: 16px;
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      margin: 10px 8px;
+      transition: transform 0.2s, opacity 0.3s;
     }
-    .whatsapp-btn:hover {
-      background-color: #1ebe5d;
+    .btn:hover { transform: scale(1.05); opacity: 0.9; }
+
+    .whatsapp-btn { background-color: #25D366; }
+    .register-btn { background-color: #ff5722; }
+    .about-btn { background-color: #ff9800; }
+    .services-btn { background-color: #9c27b0; }
+
+    section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+    section:nth-child(even) { background: rgba(255,255,255,0.05); }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-decoration: underline 2px solid white;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    p { font-size: 18px; line-height: 1.6; }
+
+    @media (max-width: 600px) {
+      header img { width: 60px; height: 60px; }
+      h1 { font-size: 28px; }
+      p.subtitle { font-size: 16px; }
+      h2 { font-size: 24px; }
+      p { font-size: 16px; }
+      .btn { padding: 10px 20px; font-size: 14px; }
     }
   </style>
 </head>
 <body>
 
-  <h1>فريلانسر حول العالم</h1>
-  <p>اقرأ واكسب $$</p>
+  <!-- Header مع شعار -->
+  <header>
+    <img src="https://via.placeholder.com/80" alt="شعار المشروع">
+    <h1>فريلانسر حول العالم</h1>
+    <p class="subtitle">اقرأ واكسب $$</p>
 
-  <a class="whatsapp-btn"
-     href="https://wa.me/963951773857"
-     target="_blank">
-     تواصل معنا على واتساب
-  </a>
+    <!-- الأزرار -->
+    <a class="btn about-btn" href="#about">من نحن</a>
+    <a class="btn services-btn" href="#services">خدماتنا</a>
+    <a class="btn whatsapp-btn" href="https://wa.me/963951773857" target="_blank">تواصل معنا على واتساب</a>
+    <a class="btn register-btn" href="https://forms.gle/example" target="_blank">سجل هنا للانضمام</a>
+  </header>
+
+  <!-- قسم من نحن -->
+  <section id="about">
+    <h2>من نحن</h2>
+    <p>نحن مشروع Freelance World Community، هدفنا خلق فرص عمل عبر الإنترنت للمستقلين العرب وتقديم التدريب على مهارات العمل الحر والتواصل مع شركات خليجية ومصرية لتنفيذ مشاريع حقيقية.</p>
+  </section>
+
+  <!-- قسم خدماتنا -->
+  <section id="services">
+    <h2>خدماتنا</h2>
+    <p>نوفر فرص عمل متنوعة مثل تسجيل ريكوردات صوتية، التفريغ الصوتي، الترجمة، المشاريع الرقمية، بالإضافة لتدريب المستقلين على مهارات العمل الحر وإدارة المشاريع والتواصل مع العملاء.</p>
+  </section>
 
 </body>
 </html>
