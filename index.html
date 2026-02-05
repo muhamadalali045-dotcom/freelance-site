@@ -1,103 +1,97 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>فريلانسر حول العالم</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #1e90ff, #00c6ff);
-      color: white;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      padding: 50px 20px 30px 20px;
-    }
-    header img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-bottom: 15px;
-    }
-    h1 { font-size: 38px; margin-bottom: 10px; }
-    p.subtitle { font-size: 20px; margin-bottom: 30px; font-weight: bold; }
-
-    .btn {
-      display: inline-block;
-      color: white;
-      padding: 14px 28px;
-      font-size: 16px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      margin: 10px 8px;
-      transition: transform 0.2s, opacity 0.3s;
-    }
-    .btn:hover { transform: scale(1.05); opacity: 0.9; }
-
-    .whatsapp-btn { background-color: #25D366; }
-    .register-btn { background-color: #ff5722; }
-    .about-btn { background-color: #ff9800; }
-    .services-btn { background-color: #9c27b0; }
-
-    section {
-      padding: 80px 20px;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-    section:nth-child(even) { background: rgba(255,255,255,0.05); }
-
-    h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      text-decoration: underline 2px solid white;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-    p { font-size: 18px; line-height: 1.6; }
-
-    @media (max-width: 600px) {
-      header img { width: 60px; height: 60px; }
-      h1 { font-size: 28px; }
-      p.subtitle { font-size: 16px; }
-      h2 { font-size: 24px; }
-      p { font-size: 16px; }
-      .btn { padding: 10px 20px; font-size: 14px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Freelance World Community</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+nav ul { list-style: none; padding: 0; display: flex; gap: 15px; }
+nav ul li { display: inline; }
+nav ul li a { text-decoration: none; color: #007bff; }
+a:hover { text-decoration: underline; }
+button, .whatsapp-btn { background-color:#25D366; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer; text-decoration:none; display:inline-block; margin-top:10px;}
+section { margin-bottom: 40px; }
+hr { border: 1px solid #ddd; margin: 40px 0; }
+</style>
 </head>
+
 <body>
 
-  <!-- Header مع شعار -->
-  <header>
-    <img src="https://via.placeholder.com/80" alt="شعار المشروع">
-    <h1>فريلانسر حول العالم</h1>
-    <p class="subtitle">اقرأ واكسب $$</p>
+<nav>
+<ul>
+<li><a href="index.html">الصفحة الرئيسية / Home</a></li>
+<li><a href="#companies">للشركات / For Companies</a></li>
+<li><a href="#contact">تواصل معنا / Contact</a></li>
+</ul>
+</nav>
 
-    <!-- الأزرار -->
-    <a class="btn about-btn" href="#about">من نحن</a>
-    <a class="btn services-btn" href="#services">خدماتنا</a>
-    <a class="btn whatsapp-btn" href="https://wa.me/963951773857" target="_blank">تواصل معنا على واتساب</a>
-    <a class="btn register-btn" href="https://forms.gle/eGDUPoxKNerKHocSA" target="_blank">سجل هنا للانضمام</a>
-  </header>
+<h1>فريلانسر حول العالم / Freelance Around the World</h1>
+<p>اقرأ واكسب $$ / Read & Earn $$</p>
 
-  <!-- قسم من نحن -->
-  <section id="about">
-    <h2>من نحن</h2>
-    <p>نحن مشروع Freelance World Community، هدفنا خلق فرص عمل عبر الإنترنت للمستقلين العرب وتقديم التدريب على مهارات العمل الحر والتواصل مع شركات خليجية ومصرية لتنفيذ مشاريع حقيقية.</p>
-  </section>
+<hr>
 
-  <!-- قسم خدماتنا -->
-  <section id="services">
-    <h2>خدماتنا</h2>
-    <p>نوفر فرص عمل متنوعة مثل تسجيل ريكوردات صوتية، التفريغ الصوتي، الترجمة، المشاريع الرقمية، بالإضافة لتدريب المستقلين على مهارات العمل الحر وإدارة المشاريع والتواصل مع العملاء.</p>
-  </section>
+<section id="about">
+<h2>من نحن / About Us</h2>
+<p>
+نحن مشروع <strong>Freelance World Community</strong>، هدفنا خلق فرص عمل عبر الإنترنت للمستقلين العرب وتقديم التدريب على مهارات العمل الحر والتواصل مع شركات خليجية ومصرية لتنفيذ مشاريع حقيقية.
+</p>
+</section>
+
+<section id="services">
+<h2>خدماتنا / Our Services</h2>
+<ul>
+<li>تسجيل ريكوردات صوتية باللهجات العربية / Voice recording</li>
+<li>تفريغ صوتي / Transcription</li>
+<li>ترجمة / Translation</li>
+<li>مشاريع رقمية / Digital Projects</li>
+<li>تدريب المستقلين / Freelance Training</li>
+</ul>
+</section>
+
+<hr>
+
+<section id="companies">
+<h2>للشركات والمؤسسات / For Companies & Partners</h2>
+
+<h3>العربية</h3>
+<p>
+نوفر فرق عمل عربية جاهزة لتنفيذ المشاريع الرقمية بكفاءة وسرعة، مع إمكانية التوسع حسب حجم المشروع.
+</p>
+<ul>
+<li>فرق تسجيل أصوات باللهجات العربية</li>
+<li>تفريغ صوتي احترافي</li>
+<li>ترجمة متعددة اللغات</li>
+<li>تصنيف البيانات (Data Labeling & Annotation)</li>
+<li>دعم مشاريع الذكاء الاصطناعي</li>
+<li>فرق عمل مرنة حسب الطلب</li>
+</ul>
+
+<h3>English</h3>
+<p>
+Freelance World Community provides scalable Arabic freelance teams for digital and AI projects.
+We offer reliable workforce solutions for companies seeking fast delivery, quality output, and cost efficiency.
+</p>
+<ul>
+<li>Voice recording teams (Arabic dialects)</li>
+<li>Transcription services</li>
+<li>Translation services</li>
+<li>Data labeling & annotation</li>
+<li>AI training data support</li>
+<li>Scalable project teams</li>
+</ul>
+
+<p>
+<a href="https://wa.me/9630951773857" target="_blank" class="whatsapp-btn">تواصل معنا عبر WhatsApp / Contact via WhatsApp</a>
+</p>
+</section>
+
+<hr>
+
+<section id="contact">
+<h2>تواصل معنا / Contact</h2>
+<p>Email: muhamadalali045@gmail.com</p>
+</section>
 
 </body>
 </html>
