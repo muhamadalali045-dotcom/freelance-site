@@ -1,4 +1,35 @@
 <body>
+  <!-- $$$ Profit Banner & CTA -->
+  <div id="profit-banner" style="position:fixed;top:0;left:0;width:100%;background:linear-gradient(270deg,#FFD700,#FF8C00,#00FF00,#00FFFF);color:#000;font-weight:bold;font-size:18px;text-align:center;padding:12px 0;z-index:10000;animation:moveGradient 5s linear infinite;">
+    💸 ابدأ واربح من 5$ إلى 100$ يومياً مع Freelance World Community! 💸
+  </div>
+
+  <!-- Animated CTA Buttons -->
+  <div style="position:fixed;bottom:90px;right:30px;display:flex;flex-direction:column;gap:15px;z-index:9999;">
+    <button onclick="window.scrollTo({top:document.getElementById('signup-form').offsetTop,behavior:'smooth'})" style="background:#FFD700;color:#000;font-weight:bold;font-size:16px;padding:15px 25px;border:none;border-radius:50px;cursor:pointer;box-shadow:0 0 20px #FFD700,0 0 40px #FF8C00;animation:pulseCTA 2s infinite;">
+      ابدأ بالربح الآن 💵
+    </button>
+    <button onclick="window.scrollTo({top:document.getElementById('signup-form').offsetTop,behavior:'smooth'})" style="background:#FF8C00;color:#fff;font-weight:bold;font-size:16px;padding:15px 25px;border:none;border-radius:50px;cursor:pointer;box-shadow:0 0 20px #FF8C00,0 0 40px #FFD700;animation:pulseCTA 2.5s infinite;">
+      اكسب $$$ من الإنترنت 💸
+    </button>
+  </div>
+
+  <style>
+    @keyframes moveGradient {
+      0% {background-position:0% 50%;}
+      50% {background-position:100% 50%;}
+      100% {background-position:0% 50%;}
+    }
+    #profit-banner {background-size:400% 400%;}
+
+    @keyframes pulseCTA {
+      0% {transform: scale(1);}
+      50% {transform: scale(1.1);}
+      100% {transform: scale(1);}
+    }
+  </style>
+</body>
+<body>
 
 <!-- أي محتوى الموقع الرئيسي هنا -->
 
