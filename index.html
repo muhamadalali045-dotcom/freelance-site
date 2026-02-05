@@ -69,7 +69,66 @@ window.addEventListener('load', () => {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Freelance World Community | Ultimate Global</title>
+<body>
 
+<!-- صورة ثلاثية الأبعاد حيوية وتفاعلية -->
+<div class="parallax-container">
+  <img src="https://i.ibb.co/0yK3hj75/image.jpg" 
+       alt="Freelance World Community" 
+       class="parallax-image">
+</div>
+
+<style>
+/* ===== Parallax Image Container ===== */
+.parallax-container {
+    perspective: 1000px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+/* ===== Parallax Image ===== */
+.parallax-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,255,255,0.3), 0 0 80px rgba(37,211,102,0.2);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    animation: glowPulse 4s infinite alternate;
+}
+
+/* ===== Glow Animation ===== */
+@keyframes glowPulse {
+    0% { box-shadow: 0 15px 40px rgba(0,255,255,0.3), 0 0 80px rgba(37,211,102,0.2); transform: rotateY(0deg) rotateX(0deg); }
+    50% { box-shadow: 0 25px 60px rgba(0,255,255,0.5), 0 0 120px rgba(37,211,102,0.4); transform: rotateY(2deg) rotateX(1deg); }
+    100% { box-shadow: 0 15px 40px rgba(0,255,255,0.3), 0 0 80px rgba(37,211,102,0.2); transform: rotateY(0deg) rotateX(0deg); }
+}
+
+/* Hover effect */
+.parallax-image:hover {
+    transform: rotateY(5deg) rotateX(3deg) scale(1.05);
+    box-shadow: 0 35px 100px rgba(0,255,255,0.6), 0 0 160px rgba(37,211,102,0.5);
+}
+</style>
+
+<script>
+// ===== 3D Parallax Effect with Mouse =====
+const parallaxImage = document.querySelector('.parallax-image');
+document.addEventListener('mousemove', (e) => {
+    const x = (window.innerWidth / 2 - e.clientX) / 30; // التحكم بمقدار الحركة
+    const y = (window.innerHeight / 2 - e.clientY) / 30;
+    parallaxImage.style.transform = `rotateY(${x}deg) rotateX(${y}deg) scale(1.05)`;
+});
+
+// ===== Reset على الخروج =====
+document.addEventListener('mouseleave', () => {
+    parallaxImage.style.transform = `rotateY(0deg) rotateX(0deg) scale(1)`;
+});
+</script>
+
+</body>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
