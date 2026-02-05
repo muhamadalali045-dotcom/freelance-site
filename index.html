@@ -5,14 +5,33 @@
 <title>Freelance World Community</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
-nav ul { list-style: none; padding: 0; display: flex; gap: 15px; }
-nav ul li { display: inline; }
-nav ul li a { text-decoration: none; color: #007bff; }
-a:hover { text-decoration: underline; }
-button, .whatsapp-btn { background-color:#25D366; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer; text-decoration:none; display:inline-block; margin-top:10px;}
-section { margin-bottom: 40px; }
-hr { border: 1px solid #ddd; margin: 40px 0; }
+/* التصميم العام */
+body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; }
+
+/* القائمة العلوية */
+nav { background-color:#007bff; padding:10px 0; position:sticky; top:0; z-index:100; }
+nav ul { list-style:none; margin:0; padding:0; display:flex; justify-content:center; gap:20px; }
+nav ul li { display:inline; }
+nav ul li a { text-decoration:none; color:white; padding:10px 20px; background-color:#007bff; border-radius:5px; transition:0.3s; }
+nav ul li a:hover { background-color:#0056b3; }
+
+/* الأقسام */
+section { padding:40px 20px; }
+#about { background-color:#f2f2f2; }
+#services { background-color:#e6f7ff; }
+#companies { background-color:#fff0f5; }
+#contact { background-color:#f9f9f9; }
+
+/* العناوين */
+h1,h2,h3 { text-align:center; }
+ul { margin-top:15px; }
+
+/* زر WhatsApp */
+.whatsapp-btn { background-color:#25D366; color:white; padding:12px 25px; border:none; border-radius:5px; cursor:pointer; text-decoration:none; display:inline-block; margin-top:10px; transition:0.3s; }
+.whatsapp-btn:hover { background-color:#1ebe5d; }
+
+/* فواصل */
+hr { border:1px solid #ddd; margin:40px 0; }
 </style>
 </head>
 
@@ -21,13 +40,14 @@ hr { border: 1px solid #ddd; margin: 40px 0; }
 <nav>
 <ul>
 <li><a href="#about">الصفحة الرئيسية / Home</a></li>
+<li><a href="#services">خدماتنا / Services</a></li>
 <li><a href="#companies">للشركات / For Companies</a></li>
 <li><a href="#contact">تواصل معنا / Contact</a></li>
 </ul>
 </nav>
 
 <h1>فريلانسر حول العالم / Freelance Around the World</h1>
-<p>اقرأ واكسب $$ / Read & Earn $$</p>
+<p style="text-align:center;">اقرأ واكسب $$ / Read & Earn $$</p>
 
 <hr>
 
@@ -48,8 +68,6 @@ hr { border: 1px solid #ddd; margin: 40px 0; }
 <li>تدريب المستقلين / Freelance Training</li>
 </ul>
 </section>
-
-<hr>
 
 <section id="companies">
 <h2>للشركات والمؤسسات / For Companies & Partners</h2>
@@ -81,16 +99,14 @@ We offer reliable workforce solutions for companies seeking fast delivery, quali
 <li>Scalable project teams</li>
 </ul>
 
-<p>
+<p style="text-align:center;">
 <a href="https://wa.me/9630951773857" target="_blank" class="whatsapp-btn">تواصل معنا عبر WhatsApp / Contact via WhatsApp</a>
 </p>
 </section>
 
-<hr>
-
 <section id="contact">
 <h2>تواصل معنا / Contact</h2>
-<p>Email: muhamadalali045@gmail.com</p>
+<p style="text-align:center;">Email: muhamadalali045@gmail.com</p>
 </section>
 
 </body>
