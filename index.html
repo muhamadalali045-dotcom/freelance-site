@@ -4,34 +4,45 @@
 <meta charset="UTF-8">
 <title>Freelance World Community</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <style>
-/* التصميم العام */
-body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; }
+body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; scroll-behavior:smooth; }
 
 /* القائمة العلوية */
-nav { background-color:#007bff; padding:10px 0; position:sticky; top:0; z-index:100; }
-nav ul { list-style:none; margin:0; padding:0; display:flex; justify-content:center; gap:20px; }
+nav { background-color:#007bff; padding:12px 0; position:sticky; top:0; z-index:100; box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+nav ul { list-style:none; margin:0; padding:0; display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
 nav ul li { display:inline; }
-nav ul li a { text-decoration:none; color:white; padding:10px 20px; background-color:#007bff; border-radius:5px; transition:0.3s; }
+nav ul li a { text-decoration:none; color:white; padding:12px 25px; border-radius:8px; background-color:#007bff; transition:0.3s; font-weight:bold; }
 nav ul li a:hover { background-color:#0056b3; }
 
 /* الأقسام */
-section { padding:40px 20px; }
-#about { background-color:#f2f2f2; }
-#services { background-color:#e6f7ff; }
-#companies { background-color:#fff0f5; }
-#contact { background-color:#f9f9f9; }
+section { padding:60px 20px; }
+#about { background: linear-gradient(to right, #f2f2f2, #e6f0ff); }
+#services { background: linear-gradient(to right, #e6f7ff, #d1f0ff); }
+#companies { background: linear-gradient(to right, #fff0f5, #ffe6f0); }
+#contact { background: linear-gradient(to right, #f9f9f9, #f0f0f0); }
 
 /* العناوين */
-h1,h2,h3 { text-align:center; }
-ul { margin-top:15px; }
+h1,h2,h3 { text-align:center; margin-bottom:20px; }
+ul { margin-top:15px; padding-left:20px; }
+ul li { margin-bottom:10px; font-size:16px; }
+
+/* أيقونات الخدمات */
+ul li i { color:#007bff; margin-right:8px; }
 
 /* زر WhatsApp */
-.whatsapp-btn { background-color:#25D366; color:white; padding:12px 25px; border:none; border-radius:5px; cursor:pointer; text-decoration:none; display:inline-block; margin-top:10px; transition:0.3s; }
+.whatsapp-btn { background-color:#25D366; color:white; padding:14px 30px; border:none; border-radius:8px; cursor:pointer; text-decoration:none; display:inline-block; font-weight:bold; transition:0.3s; font-size:18px; }
 .whatsapp-btn:hover { background-color:#1ebe5d; }
 
 /* فواصل */
-hr { border:1px solid #ddd; margin:40px 0; }
+hr { border:1px solid #ddd; margin:50px 0; }
+
+/* استجابة الموبايل */
+@media (max-width:768px){
+  nav ul { flex-direction:column; gap:10px; }
+  ul li { font-size:14px; }
+  .whatsapp-btn { font-size:16px; padding:12px 20px; }
+}
 </style>
 </head>
 
@@ -39,33 +50,32 @@ hr { border:1px solid #ddd; margin:40px 0; }
 
 <nav>
 <ul>
-<li><a href="#about">الصفحة الرئيسية / Home</a></li>
-<li><a href="#services">خدماتنا / Services</a></li>
-<li><a href="#companies">للشركات / For Companies</a></li>
-<li><a href="#contact">تواصل معنا / Contact</a></li>
+<li><a href="#about"><i class="fas fa-home"></i> الصفحة الرئيسية / Home</a></li>
+<li><a href="#services"><i class="fas fa-user"></i> خدماتنا / Services</a></li>
+<li><a href="#companies"><i class="fas fa-building"></i> للشركات / For Companies</a></li>
+<li><a href="#contact"><i class="fas fa-envelope"></i> تواصل معنا / Contact</a></li>
 </ul>
 </nav>
 
 <h1>فريلانسر حول العالم / Freelance Around the World</h1>
-<p style="text-align:center;">اقرأ واكسب $$ / Read & Earn $$</p>
-
+<p style="text-align:center; font-size:18px; margin-bottom:40px;">اقرأ واكسب $$ / Read & Earn $$</p>
 <hr>
 
 <section id="about">
 <h2>من نحن / About Us</h2>
-<p>
+<p style="max-width:800px; margin:0 auto; text-align:center;">
 نحن مشروع <strong>Freelance World Community</strong>، هدفنا خلق فرص عمل عبر الإنترنت للمستقلين العرب وتقديم التدريب على مهارات العمل الحر والتواصل مع شركات خليجية ومصرية لتنفيذ مشاريع حقيقية.
 </p>
 </section>
 
 <section id="services">
-<h2>خدماتنا / Our Services</h2>
-<ul>
-<li>تسجيل ريكوردات صوتية باللهجات العربية / Voice recording</li>
-<li>تفريغ صوتي / Transcription</li>
-<li>ترجمة / Translation</li>
-<li>مشاريع رقمية / Digital Projects</li>
-<li>تدريب المستقلين / Freelance Training</li>
+<h2>خدماتنا للأفراد / Our Services</h2>
+<ul style="max-width:700px; margin:0 auto;">
+<li><i class="fas fa-microphone"></i> تسجيل ريكوردات صوتية باللهجات العربية / Voice recording</li>
+<li><i class="fas fa-file-audio"></i> تفريغ صوتي / Transcription</li>
+<li><i class="fas fa-language"></i> ترجمة / Translation</li>
+<li><i class="fas fa-laptop-code"></i> مشاريع رقمية / Digital Projects</li>
+<li><i class="fas fa-chalkboard-teacher"></i> تدريب المستقلين / Freelance Training</li>
 </ul>
 </section>
 
@@ -73,34 +83,33 @@ hr { border:1px solid #ddd; margin:40px 0; }
 <h2>للشركات والمؤسسات / For Companies & Partners</h2>
 
 <h3>العربية</h3>
-<p>
+<p style="max-width:800px; margin:0 auto; text-align:center;">
 نوفر فرق عمل عربية جاهزة لتنفيذ المشاريع الرقمية بكفاءة وسرعة، مع إمكانية التوسع حسب حجم المشروع.
 </p>
-<ul>
-<li>فرق تسجيل أصوات باللهجات العربية</li>
-<li>تفريغ صوتي احترافي</li>
-<li>ترجمة متعددة اللغات</li>
-<li>تصنيف البيانات (Data Labeling & Annotation)</li>
-<li>دعم مشاريع الذكاء الاصطناعي</li>
-<li>فرق عمل مرنة حسب الطلب</li>
+<ul style="max-width:700px; margin:0 auto;">
+<li><i class="fas fa-users"></i> فرق تسجيل أصوات باللهجات العربية</li>
+<li><i class="fas fa-file-audio"></i> تفريغ صوتي احترافي</li>
+<li><i class="fas fa-language"></i> ترجمة متعددة اللغات</li>
+<li><i class="fas fa-database"></i> تصنيف البيانات (Data Labeling & Annotation)</li>
+<li><i class="fas fa-robot"></i> دعم مشاريع الذكاء الاصطناعي</li>
+<li><i class="fas fa-project-diagram"></i> فرق عمل مرنة حسب الطلب</li>
 </ul>
 
 <h3>English</h3>
-<p>
-Freelance World Community provides scalable Arabic freelance teams for digital and AI projects.
-We offer reliable workforce solutions for companies seeking fast delivery, quality output, and cost efficiency.
+<p style="max-width:800px; margin:0 auto; text-align:center;">
+Freelance World Community provides scalable Arabic freelance teams for digital and AI projects. We offer reliable workforce solutions for companies seeking fast delivery, quality output, and cost efficiency.
 </p>
-<ul>
-<li>Voice recording teams (Arabic dialects)</li>
-<li>Transcription services</li>
-<li>Translation services</li>
-<li>Data labeling & annotation</li>
-<li>AI training data support</li>
-<li>Scalable project teams</li>
+<ul style="max-width:700px; margin:0 auto;">
+<li><i class="fas fa-users"></i> Voice recording teams (Arabic dialects)</li>
+<li><i class="fas fa-file-audio"></i> Transcription services</li>
+<li><i class="fas fa-language"></i> Translation services</li>
+<li><i class="fas fa-database"></i> Data labeling & annotation</li>
+<li><i class="fas fa-robot"></i> AI training data support</li>
+<li><i class="fas fa-project-diagram"></i> Scalable project teams</li>
 </ul>
 
-<p style="text-align:center;">
-<a href="https://wa.me/9630951773857" target="_blank" class="whatsapp-btn">تواصل معنا عبر WhatsApp / Contact via WhatsApp</a>
+<p style="text-align:center; margin-top:30px;">
+<a href="https://wa.me/9630951773857" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> تواصل معنا عبر WhatsApp / Contact via WhatsApp</a>
 </p>
 </section>
 
