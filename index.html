@@ -1,3 +1,60 @@
+<body>
+  <!-- أي محتوى آخر موجود -->
+
+  <!-- Ultimate WhatsApp Floating Button -->
+  <a href="https://wa.me/9630951773857" target="_blank" class="whatsapp-btn-ultimate">
+    <i class="fab fa-whatsapp"></i> تواصل معنا
+  </a>
+
+  <style>
+    /* زر WhatsApp النهائي */
+    .whatsapp-btn-ultimate {
+      position: fixed;
+      bottom: 30px;
+      right: -300px; /* يبدأ خارج الشاشة */
+      z-index: 9999;
+      background: #25D366;
+      color: #fff;
+      font-size: 18px;
+      padding: 15px 25px;
+      border-radius: 50px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      transition: all 0.5s ease-in-out;
+      animation: pulseUltimate 2s infinite;
+    }
+
+    .whatsapp-btn-ultimate i {
+      font-size: 22px;
+    }
+
+    .whatsapp-btn-ultimate:hover {
+      transform: scale(1.1) rotate(-2deg);
+      box-shadow: 0 0 30px #25D366, 0 0 60px rgba(37,211,102,0.5);
+    }
+
+    @keyframes pulseUltimate {
+      0% { box-shadow: 0 0 5px #25D366, 0 0 10px rgba(37,211,102,0.2); }
+      50% { box-shadow: 0 0 15px #25D366, 0 0 30px rgba(37,211,102,0.4); }
+      100% { box-shadow: 0 0 5px #25D366, 0 0 10px rgba(37,211,102,0.2); }
+    }
+  </style>
+
+  <script>
+    // Slide In بعد 1 ثانية من تحميل الصفحة
+    window.addEventListener('load', () => {
+      const btn = document.querySelector('.whatsapp-btn-ultimate');
+      setTimeout(() => {
+        btn.style.right = '30px';
+      }, 1000);
+    });
+  </script>
+
+  <!-- أي محتوى آخر بعد الزر -->
+</body>
 <!DOCTYPE html>
 <html lang="ar">
 <head>
