@@ -1,3 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freelance World Community</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* ===== Global Styles ===== */
+body { margin:0; font-family:'Arial',sans-serif; background:#f5f7fa; color:#333; scroll-behavior:smooth; }
+a { text-decoration:none; }
+
+/* ===== Navbar ===== */
+nav { display:flex; justify-content:space-between; align-items:center; padding:20px 40px; background:#25D366; color:#fff; position:sticky; top:0; z-index:999; }
+nav .logo { font-size:24px; font-weight:bold; }
+nav ul { display:flex; gap:25px; list-style:none; }
+nav ul li a { color:#fff; font-weight:bold; transition:0.3s; }
+nav ul li a:hover { color:#000; }
+
+/* ===== Hero Section ===== */
+#hero { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:120px 20px; background:linear-gradient(135deg,#25D366,#1ebe57); color:#fff; }
+#hero h1 { font-size:48px; margin-bottom:20px; }
+#hero p { font-size:22px; margin-bottom:30px; }
+#hero .btn { background:#fff; color:#25D366; padding:15px 35px; border-radius:50px; font-size:18px; font-weight:bold; transition:0.3s; }
+#hero .btn:hover { background:#e0f7fa; transform:scale(1.05); }
+
+/* ===== Sections ===== */
+section { padding:60px 20px; }
+h2 { text-align:center; font-size:36px; margin-bottom:40px; }
+
+/* ===== Services Section ===== */
+#services { background: linear-gradient(135deg, #f0f8ff, #e0f7fa); }
+.service-cards { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; }
+.service-card { background:#fff; border-radius:20px; padding:30px; width:320px; box-shadow:0 8px 20px rgba(0,0,0,0.15); position:relative; overflow:hidden; transition:all 0.4s ease; opacity:0; transform:translateY(40px); }
+.service-card::before { content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(120deg,#25D366,#1ebe57); opacity:0.08; transition:all 0.5s ease; }
+.service-card:hover::before { opacity:0.15; }
+.service-card:hover { transform:translateY(-12px); box-shadow:0 15px 35px rgba(0,0,0,0.25); }
+.service-card h3 { margin-bottom:20px; color:#25D366; font-size:22px; }
+.service-card ul { margin-bottom:20px; padding-left:20px; }
+.service-card li { margin-bottom:10px; font-size:16px; color:#555; }
+.service-card .btn { display:inline-block; background:#25D366; color:#fff; padding:12px 25px; border-radius:50px; font-weight:bold; font-size:16px; text-align:center; transition:all 0.3s ease; }
+.service-card .btn:hover { background:#1ebe57; transform:scale(1.1); box-shadow:0 0 15px rgba(37,211,102,0.4); }
+
+/* ===== Teams Section ===== */
+.team-cards { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; }
+.team-card { background:#fff; padding:25px; border-radius:20px; width:280px; text-align:center; box-shadow:0 8px 20px rgba(0,0,0,0.15); opacity:0; transform:translateY(40px); transition:all 0.6s ease; }
+.team-card h4 { color:#25D366; margin-bottom:15px; font-size:20px; }
+.team-card p { font-size:16px; color:#555; }
+
+/* ===== Contact Section ===== */
+#contact { background:#f0f8ff; text-align:center; }
+#contact p { font-size:18px; margin-bottom:10px; }
+#contact a { color:#25D366; font-weight:bold; }
+
+/* ===== WhatsApp Button ===== */
+.whatsapp-btn-ultimate { position:fixed; bottom:30px; right:-300px; z-index:9999; background:#25D366; color:#fff; font-size:18px; padding:15px 25px; border-radius:50px; box-shadow:0 5px 15px rgba(0,0,0,0.3); display:flex; align-items:center; gap:10px; text-decoration:none; transition:all 0.5s ease-in-out; animation:pulseUltimate 2s infinite; }
+.whatsapp-btn-ultimate i { font-size:22px; }
+.whatsapp-btn-ultimate:hover { transform: scale(1.1) rotate(-2deg); box-shadow:0 0 30px #25D366,0 0 60px rgba(37,211,102,0.5); }
+@keyframes pulseUltimate { 0% { box-shadow:0 0 5px #25D366,0 0 10px rgba(37,211,102,0.2); } 50% { box-shadow:0 0 15px #25D366,0 0 30px rgba(37,211,102,0.4); } 100% { box-shadow:0 0 5px #25D366,0 0 10px rgba(37,211,102,0.2); } }
+
+/* ===== Signup Form ===== */
+form input, form textarea, form select { width:100%; padding:12px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc; font-size:16px; }
+form button { background:#25D366; color:#fff; padding:15px 30px; border:none; border-radius:50px; font-size:16px; font-weight:bold; cursor:pointer; transition:0.3s; }
+form button:hover { background:#1ebe57; }
+
+/* ===== Animation on Scroll ===== */
+.animate-on-scroll { opacity:0; transform:translateY(40px); transition:all 0.8s ease-out; }
+.animate-on-scroll.visible { opacity:1; transform:translateY(0); }
+
+/* ===== Responsive ===== */
+@media (max-width:768px) { .service-card, .team-card { width:90%; } }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="logo">Freelance World Community</div>
+  <ul>
+    <li><a href="#hero">Home / الصفحة الرئيسية</a></li>
+    <li><a href="#services">Services / خدماتنا</a></li>
+    <li><a href="#teams">For Individuals / الأفراد</a></li>
+    <li><a href="#companies">For Companies / الشركات</a></li>
+    <li><a href="#signup-form">Sign Up / سجل الآن</a></li>
+    <li><a href="#contact">Contact / تواصل معنا</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero">
+  <h1>Freelance World Community</h1>
+  <p>اقرأ واكسب $$$ | Work & Earn Online</p>
+  <a href="#signup-form" class="btn">سجل الآن / Sign Up</a>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="animate-on-scroll">
+  <h2>خدماتنا / Our Services</h2>
+  <div class="service-cards">
+    <!-- Service Cards هنا كما بالنسخة السابقة -->
+  </div>
+</section>
+
+<!-- Teams Section -->
+<section id="teams" class="animate-on-scroll">
+  <h2>الأفراد / For Individuals</h2>
+  <div class="team-cards">
+    <!-- Team Cards هنا -->
+  </div>
+</section>
+
+<!-- Companies Section -->
+<section id="companies" class="animate-on-scroll">
+  <h2>للشركات / For Companies</h2>
+  <div class="team-cards">
+    <!-- Companies Cards هنا -->
+  </div>
+</section>
+
+<!-- Signup Form Section -->
+<section id="signup-form">
+  <!-- Form كما بالنسخة السابقة -->
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <!-- Contact كما بالنسخة السابقة -->
+</section>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/9630951773857" target="_blank" class="whatsapp-btn-ultimate">
+  <i class="fab fa-whatsapp"></i> تواصل معنا
+</a>
+
+<script>
+// JS كما بالنسخة السابقة
+</script>
+
+</body>
+</html>
+
 <body>
   <!-- أي محتوى آخر موجود -->
 
